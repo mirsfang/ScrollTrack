@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         mMainRecyclerView.addItemDecoration(new TopDecoration(findViewById(R.id.main_top_view)));
         mMainRecyclerView.addOnScrollListener(new TopTrackListener(findViewById(R.id.main_top_view)));
         mMainRecyclerView.addOnScrollListener(new BottomTrackListener(findViewById(R.id.main_bottom_view)));
-
         mMainRecyclerView.setAdapter(new SimpleAdapter());
     }
 
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.main_check_resource_code:
                 try {
                     Intent it = new Intent(Intent.ACTION_VIEW);
-                    it.setData(Uri.parse("https://github.com/boybeak/ScrollTrack"));
+                    it.setData(Uri.parse("https://github.com/mirsfang/ScrollTrack"));
                     startActivity(it);
                 } catch (Exception e) {
                     Toast.makeText(this, "no browser found for view code web page", Toast.LENGTH_SHORT).show();
